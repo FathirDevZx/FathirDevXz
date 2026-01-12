@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>哲学 | Stoikisme & Nihilisme</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#05060a;
+  --glass:rgba(255,255,255,0.06);
+  --line:rgba(255,255,255,0.15);
+  --cyan:#00fff0;
+  --violet:#8a7dff;
+  --gold:#ffd36a;
+  --text:#eaeaff;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top,#0c0f2a,#05060a 70%);
+  color:var(--text);
+}
+
+/* ====== GLOBAL ====== */
+section{padding:120px 8%}
+h1,h2,h3{letter-spacing:1px}
+p{opacity:.85}
+
+/* ====== NAV ====== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  backdrop-filter:blur(14px);
+  background:linear-gradient(to right,rgba(0,0,0,.6),rgba(0,0,0,.2));
+  border-bottom:1px solid var(--line);
+}
+
+nav h2{
+  font-weight:700;
+  background:linear-gradient(90deg,var(--cyan),var(--violet));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#fff;
+  opacity:.7;
+  transition:.3s;
+}
+nav a:hover{opacity:1}
+
+/* ====== HERO ====== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-box{
+  max-width:900px;
+  padding:80px;
+  border-radius:30px;
+  background:linear-gradient(135deg,var(--glass),transparent);
+  box-shadow:
+    0 0 60px rgba(0,255,240,.15),
+    inset 0 0 40px rgba(255,255,255,.04);
+  animation:fadeUp 1.3s ease;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  background:linear-gradient(90deg,var(--gold),var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:1.1rem;
+  margin:25px 0 40px;
+}
+
+.hero button{
+  padding:14px 40px;
+  border-radius:50px;
+  border:none;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  color:#000;
+  background:linear-gradient(90deg,var(--cyan),var(--gold));
+  box-shadow:0 0 30px rgba(0,255,240,.4);
+}
+
+/* ====== QUOTES GRID ====== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.card{
+  padding:30px;
+  border-radius:22px;
+  background:linear-gradient(160deg,var(--glass),transparent);
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.6),
+    inset 0 0 25px rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 50px rgba(138,125,255,.25);
+}
+
+.quote{
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+.author{
+  margin-top:20px;
+  font-weight:600;
+  color:var(--gold);
+  font-size:.85rem;
+}
+
+/* ====== TITLES ====== */
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:2.6rem;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ====== FOOTER ====== */
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid var(--line);
+  opacity:.6;
+  font-size:.8rem;
+}
+
+/* ====== ANIMATION ====== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>哲学</h2>
+  <div>
+    <a href="#stoic">Stoikisme</a>
+    <a href="#nihil">Nihilisme</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>Stoikisme & Nihilisme</h1>
+    <p>
+      Dua aliran filsafat ekstrem — satu mengajarkan keteguhan jiwa,
+      satu lagi membongkar makna hingga ke akar kehampaan.
+      Disajikan dalam estetika teknologi Timur modern.
+    </p>
+    <button onclick="document.getElementById('stoic').scrollIntoView()">Jelajahi</button>
+  </div>
+</section>
+
+<!-- STOIKISME -->
+<section id="stoic">
+  <div class="section-title">
+    <h2>Stoikisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Kebahagiaan hidup bergantung pada kualitas pikiranmu."</div>
+      <div class="author">— Marcus Aurelius</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Jangan mengharapkan peristiwa terjadi sesuai keinginanmu. Terimalah sebagaimana adanya."</div>
+      <div class="author">— Epictetus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Kesulitan menguatkan pikiran, sebagaimana kerja keras menguatkan tubuh."</div>
+      <div class="author">— Seneca</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Apa yang mengganggumu bukanlah peristiwa, tetapi penilaianmu terhadapnya."</div>
+      <div class="author">— Epictetus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Hidup panjang bukanlah soal waktu, melainkan soal penggunaan waktu."</div>
+      <div class="author">— Seneca</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Jika kamu terganggu oleh sesuatu dari luar, penderitaan itu berasal dari penilaianmu sendiri."</div>
+      <div class="author">— Marcus Aurelius</div>
+    </div>
+  </div>
+</section>
+
+<!-- NIHILISME -->
+<section id="nihil">
+  <div class="section-title">
+    <h2>Nihilisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Tuhan telah mati. Dan kita yang membunuh-Nya."</div>
+      <div class="author">— Friedrich Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Ketika kamu menatap ke jurang, jurang itu menatap kembali ke dalam dirimu."</div>
+      <div class="author">— Friedrich Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Makna hidup tidak ditemukan, tetapi diciptakan."</div>
+      <div class="author">— Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Manusia adalah makhluk yang mencari makna di dunia yang tidak memberikannya."</div>
+      <div class="author">— Albert Camus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Tidak ada kebenaran mutlak, hanya interpretasi."</div>
+      <div class="author">— Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Pemberontakan adalah satu-satunya respons rasional terhadap absurditas."</div>
+      <div class="author">— Albert Camus</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Filosofi Timur Modern · Stoikisme & Nihilisme
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>哲学 Quotes | Stoikisme & Nihilisme</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#04050a;
+  --glass:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
+  --cyan:#00ffe1;
+  --violet:#8b7bff;
+  --gold:#ffd27a;
+  --text:#eef0ff;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(circle at top,#0b0f2e,#04050a 70%);
+  color:var(--text);
+}
+
+/* ===== HEADER ===== */
+header{
+  text-align:center;
+  padding:80px 8% 40px;
+}
+
+header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,var(--cyan),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:2px;
+}
+
+header p{
+  max-width:700px;
+  margin:20px auto 0;
+  opacity:.75;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:2.4rem;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* ===== CARD ===== */
+.card{
+  padding:30px;
+  border-radius:22px;
+  background:linear-gradient(160deg,var(--glass),transparent);
+  border:1px solid var(--border);
+  box-shadow:
+    0 15px 50px rgba(0,0,0,.7),
+    inset 0 0 25px rgba(255,255,255,.03);
+  transition:.4s ease;
+  animation:fadeUp .8s ease forwards;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 60px rgba(0,255,225,.25);
+}
+
+.quote{
+  font-size:.95rem;
+  line-height:1.7;
+}
+
+.author{
+  margin-top:18px;
+  font-weight:600;
+  font-size:.85rem;
+  color:var(--gold);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid var(--border);
+  opacity:.6;
+  font-size:.8rem;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>哲学 QUOTES</h1>
+  <p>Koleksi kutipan Stoikisme & Nihilisme dengan estetika teknologi Timur modern.</p>
+</header>
+
+<!-- STOIKISME -->
+<section>
+  <div class="section-title">
+    <h2>Stoikisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Kebahagiaan hidup bergantung pada kualitas pikiranmu."</div>
+      <div class="author">— Marcus Aurelius</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Apa yang mengganggumu bukanlah kejadian, tetapi penilaianmu terhadapnya."</div>
+      <div class="author">— Epictetus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Kesulitan menguatkan jiwa sebagaimana latihan menguatkan tubuh."</div>
+      <div class="author">— Seneca</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Kuasai dirimu, maka dunia tidak akan mampu melukaimu."</div>
+      <div class="author">— Epictetus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Hidup bukan tentang menunggu badai berlalu, tetapi belajar berdiri di tengahnya."</div>
+      <div class="author">— Marcus Aurelius</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Waktu yang kita keluhkan hilang, sebenarnya kita sia-siakan sendiri."</div>
+      <div class="author">— Seneca</div>
+    </div>
+  </div>
+</section>
+
+<!-- NIHILISME -->
+<section>
+  <div class="section-title">
+    <h2>Nihilisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Tuhan telah mati, dan kita yang membunuh-Nya."</div>
+      <div class="author">— Friedrich Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Jika kamu menatap jurang terlalu lama, jurang akan menatap balik."</div>
+      <div class="author">— Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Tidak ada fakta, hanya interpretasi."</div>
+      <div class="author">— Friedrich Nietzsche</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Manusia mencari makna di alam semesta yang diam."</div>
+      <div class="author">— Albert Camus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Pemberontakan adalah bukti bahwa kita masih hidup."</div>
+      <div class="author">— Albert Camus</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Makna hidup bukan ditemukan, tapi dipaksakan."</div>
+      <div class="author">— Nihilisme Modern</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Filosofi Modern · Stoikisme × Nihilisme
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>哲学 ARCHIVE | Stoik & Nihil</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#030409;
+  --panel:rgba(255,255,255,.045);
+  --border:rgba(255,255,255,.1);
+  --cyan:#4efcff;
+  --violet:#9b8cff;
+  --gold:#ffda8a;
+  --text:#f2f4ff;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:
+    linear-gradient(180deg,#05081c,#030409 60%);
+  color:var(--text);
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  padding:25px 8%;
+  backdrop-filter:blur(16px);
+  background:linear-gradient(to right,rgba(0,0,0,.6),rgba(0,0,0,.2));
+  border-bottom:1px solid var(--border);
+}
+
+.topbar h1{
+  margin:0;
+  font-size:1.6rem;
+  letter-spacing:3px;
+  background:linear-gradient(90deg,var(--cyan),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== INTRO ===== */
+.intro{
+  padding:80px 8% 40px;
+  max-width:900px;
+}
+
+.intro p{
+  font-size:1rem;
+  opacity:.75;
+  line-height:1.7;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:50px;
+}
+
+.section-title span{
+  font-size:.75rem;
+  letter-spacing:4px;
+  opacity:.5;
+}
+
+.section-title h2{
+  font-size:2.2rem;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+}
+
+/* ===== CARD ===== */
+.card{
+  position:relative;
+  padding:34px;
+  border-radius:26px;
+  background:linear-gradient(160deg,var(--panel),transparent);
+  border:1px solid var(--border);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.75),
+    inset 0 0 30px rgba(255,255,255,.03);
+  transition:.45s ease;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:26px;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.08),transparent);
+  opacity:0;
+  transition:.45s;
+}
+
+.card:hover::before{opacity:1}
+
+.card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 0 70px rgba(79,252,255,.25);
+}
+
+.quote{
+  font-size:.95rem;
+  line-height:1.75;
+}
+
+.author{
+  margin-top:22px;
+  font-weight:600;
+  font-size:.8rem;
+  letter-spacing:1px;
+  color:var(--gold);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:50px;
+  border-top:1px solid var(--border);
+  font-size:.75rem;
+  opacity:.5;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>哲学 ARCHIVE</h1>
+</div>
+
+<div class="intro">
+  <p>
+    Arsip kutipan Stoikisme dan Nihilisme.  
+    Disusun seperti database filsafat dalam sistem teknologi Timur modern — dingin, presisi, dan tanpa ilusi.
+  </p>
+</div>
+
+<section>
+  <div class="section-title">
+    <span>DISCIPLINE</span>
+    <h2>Stoikisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Kebahagiaan hidupmu sepenuhnya bergantung pada pikiranmu."</div>
+      <div class="author">MARCUS AURELIUS</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Jika kamu ingin tak terkalahkan, jangan bertarung dengan hal di luar kendalimu."</div>
+      <div class="author">EPICTETUS</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Penderitaan sering kali lebih berasal dari imajinasi daripada kenyataan."</div>
+      <div class="author">SENECA</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Kuasai reaksi batinmu, dan dunia kehilangan kekuatannya atasmu."</div>
+      <div class="author">EPICTETUS</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Hidup yang baik tidak panjang, tapi dijalani dengan benar."</div>
+      <div class="author">SENECA</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Tak ada yang bisa melukaimu tanpa persetujuan pikiranmu sendiri."</div>
+      <div class="author">MARCUS AURELIUS</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <span>VOID</span>
+    <h2>Nihilisme</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="quote">"Tuhan telah mati. Dan kita hidup di dunia setelah kematian itu."</div>
+      <div class="author">FRIEDRICH NIETZSCHE</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Tidak ada kebenaran, hanya perspektif."</div>
+      <div class="author">FRIEDRICH NIETZSCHE</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Manusia menuntut makna dari alam semesta yang tidak menjawab."</div>
+      <div class="author">ALBERT CAMUS</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Kesadaran akan kehampaan adalah awal kebebasan."</div>
+      <div class="author">NIHILISME</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Hidup absurd, namun kita tetap berjalan."</div>
+      <div class="author">ALBERT CAMUS</div>
+    </div>
+
+    <div class="card">
+      <div class="quote">"Makna hanyalah konstruksi rapuh di atas kehampaan."</div>
+      <div class="author">NIETZSCHEAN THOUGHT</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  哲学 SYSTEM · Stoikisme × Nihilisme
+</footer>
+
+</body>
+</html>
